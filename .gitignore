@@ -1,0 +1,7 @@
+# Fichiers générés par Python
+__pycache__/
+*.pyc
+
+# Fichiers de dépendances Python
+env/
+venv/
