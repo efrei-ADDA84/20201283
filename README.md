@@ -20,3 +20,17 @@ Commande d'exécution : docker run -e OPENWEATHER_API_KEY=votre api key -e latit
 
 
 # Rapport TP2
+
+## Liens et commande : 
+
+Docker hub : https://hub.docker.com/r/juleslogerot/meteoapi2
+Commande d'exécution : docker run -d --name meteoapi2 -p 8080:8080 --env OPENWEATHER_API_KEY=votre api key meteoapi2
+Accéder à l'api sur un autre terminal : curl "http://localhost:8080/?lat=5.902785&lon=102.754175"
+
+## Etapes réalisées : 
+
+- Codé l'API avec la bibliothèque Flask
+- Créer le build.yml pour configurer le workflow
+- Créer le variables secretes
+- Créer l'image docker
+- Après avoir testé l'API à travers l'image docker, j'ai ajouté hadolint qui m'a permis de détécter des éléments deprecated dans mon code
