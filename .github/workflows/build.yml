@@ -6,6 +6,21 @@ on:
       - main
 
 jobs:
+  hadolint:
+    name: Hadolint Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Hadolint
+        run: |
+          sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v2.7.0/hadolint-Linux-x86_64
+          sudo chmod +x /bin/hadolint
+
+      - name: Run Hadolint
+        run: hadolint Dockerfile
+        
   build:
     runs-on: ubuntu-latest
 
