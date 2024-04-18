@@ -27,6 +27,10 @@ Docker hub : https://hub.docker.com/r/juleslogerot/meteoapi2
 Commande d'exécution : docker run -d --name meteoapi2 -p 8080:8080 --env OPENWEATHER_API_KEY=votre api key meteoapi2
 Accéder à l'api sur un autre terminal : curl "http://localhost:8080/?lat=5.902785&lon=102.754175"
 
+## Contexte : 
+
+Dans ce TP, nous avons utilisé python et la bibliothèque Flask pour créer une API qui à partir d'une longitude et latitude renvoie les données météo associées grâce à l'API Openweather. L'objectif était ensuite de s'initier à la création d'un workflow github action qui permet d'executer des tâches à chaque comit sur le projet.
+
 ## Etapes réalisées : 
 
 - Codé l'API avec la bibliothèque Flask
@@ -34,3 +38,4 @@ Accéder à l'api sur un autre terminal : curl "http://localhost:8080/?lat=5.902
 - Créer le variables secretes
 - Créer l'image docker
 - Après avoir testé l'API à travers l'image docker, j'ai ajouté hadolint qui m'a permis de détécter des éléments deprecated dans mon code
+
