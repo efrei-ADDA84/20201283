@@ -20,6 +20,9 @@ jobs:
         password: ${{ secrets.DOCKER_TOKEN }}
 
     - name: Build and push Docker image
-      run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/juleslogerot/meteoapi2:latest .
-        docker push ${{ secrets.DOCKER_USERNAME }}/juleslogerot/meteoapi2:latest
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        file: ./Dockerfile
+        push: true
+        tags: juleslogerot/meteoapi2:latest
