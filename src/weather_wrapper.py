@@ -1,3 +1,5 @@
+"""
+
 import os
 import sys
 import requests
@@ -43,3 +45,4 @@ if __name__ == "__main__":
         print(f"Description : {description}")
     else:
         print("Erreur lors de la récupération des données météorologiques.")
+"""
