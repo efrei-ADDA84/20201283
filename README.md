@@ -35,7 +35,32 @@ Dans ce TP, nous avons utilisé python et la bibliothèque Flask pour créer une
 
 - Codé l'API avec la bibliothèque Flask
 - Créer le build.yml pour configurer le workflow
-- Créer le variables secretes
+- Créer les variables secretes
 - Créer l'image docker
 - Après avoir testé l'API à travers l'image docker, j'ai ajouté hadolint qui m'a permis de détécter des éléments deprecated dans mon code
+
+
+# Rapport TP3 : 
+
+## Liens et commande : 
+
+Azure : https://portal.azure.com/#@efrei.net/resource/subscriptions/765266c6-9a23-4638-af32-dd1e32613047/resourceGroups/ADDA84-CTP/providers/Microsoft.ContainerInstance/containerGroups/20201283/overview
+Accéder à l'image docker dans le conteneur registry : curl "http://devops-20201283.francesouth.azurecontainer.io/?lat=48.8566&lon=2.3522"
+résutat : {"city":"Paris","country":"FR","description":"overcast clouds","temp_max":11.11,"temp_min":8.84,"temperature":9.82}
+
+## Contexte : 
+
+Dans ce TP, nous avons créer un workflow permettant de réaliser automatiquement plusieurs actions sur azure. Allant du build du containeur à son déploiement sur azure. L'objectif est donc d'automatiser ces tâches qui pourrait prendre du temps à chaque push du code.
+
+## Etapes réalisés : 
+
+- Changer le port de connexion
+- Modifier le build.yml pour configurer les workflows (build and push et deploy)
+- Créer les variables secrètes pour la connexion à azure
+- Push son code pour tester les workflows
+- Faire appel au containeur registry
+
+## Difficultées
+
+Réussir à configurer le buil.yml car il faut trouver les bonnes fonctions misent à dispositions. Problème plus général connaître les régions qui serait disponible pour le déploiement, heureusement ici vous aviez donné les solutions. 
 
