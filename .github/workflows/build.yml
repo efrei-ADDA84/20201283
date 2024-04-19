@@ -55,7 +55,7 @@ jobs: # Définition des jobs à exécuter
         dns-name-label: devops-20201283 # Label DNS pour l'instance
         image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/20201283:v1 # Image à déployer
         name: 20201283 # Nom de l'instance ACI
-        location: 'francecentral' # Emplacement géographique pour le déploiement
+        location: 'france south' # Emplacement géographique pour le déploiement
         registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }} # Serveur de connexion au registre
         registry-username: ${{ secrets.REGISTRY_USERNAME }} # Nom d'utilisateur pour le registre
         registry-password: ${{ secrets.REGISTRY_PASSWORD }} # Mot de passe pour le registre
